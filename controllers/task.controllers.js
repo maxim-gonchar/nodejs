@@ -29,7 +29,6 @@ const createTask = async (req, res, next) => {
 
 const updateTask = async (req, res, next) => {
   try {
-    console.log(req.params.id);
     const { name, description, status } = req.body;
     await Task.findByIdAndUpdate(req.params.id, {
       name,
